@@ -1,0 +1,35 @@
+#chat_box {
+    -webkit-box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0,0,0,0);
+    background: #FFFFFF;
+    }
+   body#tinymce {
+   background: #FFFFFF
+   }
+     form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 12px 20px }
+
+     #messages { list-style-type: none; margin: 0; padding: 0; }
+     #messages li { padding: 5px 10px; }
+     #messages li:nth-child(odd) { background: #eee; }
+     .colors {
+       position: fixed;
+     }
+
+     .color {
+       display: inline-block;
+       height: 48px;
+       width: 48px;
+     }
+
+     .color.black { background-color: black; }
+     .color.red { background-color: red; }
+     .color.green { background-color: green; }
+     .color.blue { background-color: blue; }
+     .color.yellow { background-color: yellow; }
+
+     .row {
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+     }

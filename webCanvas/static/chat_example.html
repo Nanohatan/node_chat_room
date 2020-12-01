@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="chat_room.css">
+  </head>
+  <body>
+    <h1>roome name</h1>    
+    <h3>your name</h3>
+      <div class="colors">
+        <div class="color black"></div>
+        <div class="color red"></div>
+        <div class="color green"></div>
+        <div class="color blue"></div>
+        <div class="color yellow"></div>
+      </div>
+
+      <div class="row">
+        <canvas class="whiteboard" width="800" height="400" style="border: 3px solid green;" >Your browser does not support the HTML canvas tag.</canvas>
+        <div id=chat_box style="overflow-y:scroll; width: 300px; height: 400px; margin-left: 30px;">
+          <ul id="messages"></ul>
+        </div>
+      </div>
+      <form style="text-align: center; margin: 30px;" action="">
+        <input id="m" autocomplete="off" style="width: 50%; padding: 12px 20px; border: 3px solid #555;"/><button>Send</button>
+      </form>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="draw.js"> </script>
+    <script src="chat.js"></script>
+    
+  </body>
+</html>

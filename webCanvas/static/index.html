@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Index html</h1>
+
+<form action="/createRoom" method="get" onsubmit="return validateForm()">
+  <input type="text" placeholder="room name" name="roomName"><br><br>
+  <input type="text" placeholder="your name" name="userName"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p id="message">Click on the submit button</p>
+
+
+</body>
+<script>
+  function validateForm(){
+    var rn = document.forms[0]["roomName"].value;
+    var un = document.forms[0]["userName"].value;
+    var msg = document.getElementById("message");
+    if ( rn=="" || un=="" ){
+      msg.innerHTML="full room and username";
+      return false;
+    } 
+    return true;
+  }
+
+  
+</script>
+</html>

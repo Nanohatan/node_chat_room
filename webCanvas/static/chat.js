@@ -1,6 +1,4 @@
 $(function () {
-    var socket = io();
-
     var url_string = window.location.href;
     var url = new URL(url_string);
     var r = url.searchParams.get("roomName");
@@ -17,5 +15,13 @@ $(function () {
     
     socket.on('server_to_client', function(user,msg){
       $('#messages').prepend($('<li>').text(user+':'+msg));
+    });
+
+    socket.on('player update',function(members){
+      $('#players').empty();
+      members.forEach(m => {
+        $('#players').prepend($('<li>').text(m));
+      });
+
     });
 });

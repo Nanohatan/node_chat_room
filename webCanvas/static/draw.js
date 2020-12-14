@@ -2,7 +2,6 @@
 
 (function() {
 
-    var socket = io();
     var canvas = document.getElementsByClassName('whiteboard')[0];
     var colors = document.getElementsByClassName('color');
     var context = canvas.getContext('2d');
@@ -30,7 +29,6 @@
     var url_string = window.location.href;
     var url = new URL(url_string);
     var r = url.searchParams.get("roomName");
-    socket.emit("client_to_server_join", r);
   
     socket.on('drawing', onDrawingEvent);
     var startX,startY,x,y;
